@@ -1,0 +1,40 @@
+<!doctype>
+<html>
+<head>
+	<title>Passive JavaScript execution via <BODY> and oninput attribute</title>
+	<link href="../common-styles.css" rel="stylesheet" />
+</head>
+<body oninput="alert('Hacked !!');document.write('<body></body>');document.body.style.backgroundColor = 'red';">
+	<header>
+		<h1>Passive JavaScript execution via <BODY> and oninput attribute</h1>
+		<form id="test" action="http://www.google.com/">
+			Username: <input type="text" autofocus />
+			<button type="submit">Login</button>
+		</form>
+	</header>
+	<main>
+		<article>
+		  <h2>Article 1 Content Title</h2>
+		  <p>Article 1 Content Posted by User. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</article>
+		<article>
+		  <h2>Article 2 Content Title</h2>
+		  <p>
+			Article 2 Content Posted by User. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			<button form="test" formaction="javascript:alert(1)">Hack the login form</button>
+		  </p>
+		</article>
+		<aside>Here is the aside</aside>
+	</main>
+	<nav>
+		<a href="/">Home</a>
+		<a href="/about">About</a>
+		<a href="/blog">Blog</a>
+		<a href="/jobs">Careers</a>
+		<a href="/contact">Contact Us</a>
+	</nav>
+	<footer>
+		<p>Copyright &#169; 2017 <a href="/">My Site</a></p>
+	</footer>
+</body>
+</html>
